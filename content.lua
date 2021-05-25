@@ -22,6 +22,8 @@ function RPH_InitEnFactionGains()
 	zone.Thunder_Bluff = 1456
 	zone.UnGoro_Crater = 1449
 	zone.Winterspring = 1452
+	zone.Bloodmyst_Isle = 1450
+	zone.Azuremyst_Isle = 1443
 	
 	-- Eastern Kingdoms
 	zone.Alterac_Mountains = 1416
@@ -49,11 +51,24 @@ function RPH_InitEnFactionGains()
 	zone.Western_Plaguelands = 1422
 	zone.Westfall = 1436
 	zone.Wetlands = 1437
+	zone.Eversong_Woods = 1941
+	zone.Isle_Of_Quel_Danas = 1957
+	
+	-- Outlands
+	zone.Hellfire_Peninsula = 1944
+	zone.Zangarmarsh = 1946
+	zone.Shadowmoon_Valley = 1948
+	zone.Blades_Edge_Mountains = 1949
+	zone.Nagrand = 1951
+	zone.Terokkar_Forest = 1952
+	zone.Netherstorm = 1953
+	zone.Shattrah_City = 1955
 
 	-- Battlegrounds
 	zone.Warsong_Gulch = 1460
 	zone.Arathi_Basin = 1461
 	zone.Alterac_Valley = 1459
+	zone.Eye_Of_The_Storm = 1956
 
 	if (RPH_IsAlliance) then
 		-- Stormwind
