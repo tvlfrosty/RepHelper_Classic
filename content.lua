@@ -133,6 +133,13 @@ function RPH_InitEnFactionGains()
 		RPH_AddQuest(589, 4, 8, 4970, 50, {[12622] = 5, [12623] = 5})
 		RPH_AddQuest(589, 4, 8, 5201, 50)
 		RPH_AddQuest(589, 6, 8, 5981, 50)
+		
+		-- Exodar
+		RPH_AddQuest(930, 4, 8, 7792, 350, {[2592] = 60}, nill, false)
+		RPH_AddQuest(930, 4, 8, 7798, 350, {[4306] = 60}, nill, false)
+		RPH_AddQuest(930, 4, 8, 10356, 350, {[4338] = 60}, nill, false)
+		RPH_AddQuest(930, 4, 8, 10357, 350, {[14047] = 60}, nill, false)
+		RPH_AddQuest(930, 4, 8, 10358, 75, {[14047] = 20})
 
 	end
 
