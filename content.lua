@@ -202,6 +202,12 @@ function RPH_InitEnFactionGains()
 		RPH_AddMob(729, 4, 8, "Ivus the Forest Lord", 125)
 		RPH_AddGeneral(729, 4, 8, "Alliance Players", 1, "Alliance Players", "Kill Alliance players to gain reputation")
 
+		-- Silvermoon City
+		RPH_AddQuest(911, 4, 8, 10359, 350, {[2592] = 60}, nill, false)
+		RPH_AddQuest(911, 4, 8, 10360, 350, {[4306] = 60}, nill, false)
+		RPH_AddQuest(911, 4, 8, 10361, 350, {[4338] = 60}, nill, false)
+		RPH_AddQuest(911, 4, 8, 10362, 350, {[14047] = 60}, nill, false)
+		RPH_AddQuest(911, 4, 8, 10363, 75, {[14047] = 20})
 	end
 
 	-- Argent Dawn
