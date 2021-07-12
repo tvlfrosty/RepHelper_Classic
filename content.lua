@@ -471,7 +471,6 @@ function RPH_InitEnFactionGains()
 	
 	-- Cenarion Expedition
 	-- TODO: Add turn-in quests / Dailies / Dungeons (and add quest to questdb.lua)
-	RPH_AddQuest(942, 4, 5, "Identify Plant Parts", 250, {["Unidentified Plant Parts"] = 10})
 	RPH_AddQuest(942, 4, 8, "Preparing for War", 250, {["Coilfang Armaments"] = 1}, nil, false)
 	RPH_AddQuest(942, 4, 8, "Coilfang Armaments", 75, {["Coilfang Armaments"] = 1}, nil, true)
 
@@ -499,7 +498,33 @@ function RPH_InitEnFactionGains()
 	RPH_AddInstance(989, 4, 8, "Black Morass", 1200, false)
 	RPH_AddInstance(989, 4, 8, "Old Hillsbrad Foothills (heroic)", 2800, true)
 	RPH_AddInstance(989, 4, 8, "Black Morass (heroic)", 1900, true)
+
+	-- The Scryers
+	-- TODO: add non-turn-in quests
+	-- TODO: add limits (ie some items are only until honored)
+	-- Source: https://tbc.wowhead.com/faction=934/the-scryers#quests
+	RPH_AddQuest(934, 4, 5, "Single Sunfury Signet", 25, {["Sunfury Signet"] = 1})
+	RPH_AddQuest(934, 4, 5, "Sunfury Signets", 250, {["Sunfury Signet"] = 10})
+	RPH_AddQuest(934, 4, 5, "More Sunfury Signets", 250, {["Sunfury Signet"] = 10})
+	RPH_AddQuest(934, 4, 5, "Single Firewing Signet", 25, {["Firewing Signet"] = 1})
+	RPH_AddQuest(934, 4, 5, "Firewing Signets", 250, {["Firewing Signet"] = 10})
+	RPH_AddQuest(934, 4, 5, "More Firewing Signets", 250, {["Firewing Signet"] = 10})
+	-- This one is only if you are switching faction from Aldor...
+	RPH_AddQuest(934, 4, 5, "More Basilisk Eyes", 250, {["Basilisk Eye"] = 8}) 
 	
+	-- The Aldor
+	-- TODO: add non-turn-in quests
+	-- TODO: add limits (ie some items are only until honored)
+	-- Source: https://tbc.wowhead.com/faction=932/the-aldor
+	RPH_AddQuest(932, 4, 5, "Single Mark of Sargeras", 25, {["Mark of Sargeras"] = 1})
+	RPH_AddQuest(932, 4, 5, "Marks of Sargeras", 250, {["Mark of Sargeras"] = 10})
+	RPH_AddQuest(932, 4, 5, "More Marks of Sargerass", 250, {["Mark of Sargeras"] = 10})
+	RPH_AddQuest(932, 4, 5, "Single Mark of Kil'jaeden", 25, {["Mark of Kil'jaeden"] = 1})
+	RPH_AddQuest(932, 4, 5, "Marks of Kil'jaeden", 250, {["Mark of Kil'jaeden"] = 10})
+	RPH_AddQuest(932, 4, 5, "More Marks of Kil'jaeden", 250, {["Mark of Kil'jaeden"] = 10})
+	-- This one is only if you are switching faction from Aldor...
+	RPH_AddQuest(932, 4, 5, "More Venom Sacs", 250, {["Dreadfang Venom Sac"] = 8}) 
+
 ---	local preGC = collectgarbage("count"
 	collectgarbage("collect")
 ---	print("Collected " .. (preGC-collectgarbage("count")) .. " kB of garbage RPH");
