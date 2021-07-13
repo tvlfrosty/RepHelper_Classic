@@ -884,7 +884,10 @@ function RPH:Quest_Names(questIndex)
 				if localization == "zhTW" then localization = "zhCN" end
 				
 				quest = RPH_QuestDB[questIndex][localization]
-			else
+			-- if the function exists (according to https://wowpedia.fandom.com/wiki/API_C_QuestLog.GetQuestInfo it is in Classic on purpose) get quest name from ID
+			elseif (C_QuestLog.GetQuestInfo(questIndex)) then
+				quest = C_QuestLog.GetQuestInfo(questIndex)
+			else 
 				quest = "Quest name not available. QuestID: "..questIndex
 			end
 		else

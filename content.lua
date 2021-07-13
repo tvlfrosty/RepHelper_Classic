@@ -471,7 +471,6 @@ function RPH_InitEnFactionGains()
 	
 	-- Cenarion Expedition
 	-- TODO: Add turn-in quests / Dailies / Dungeons (and add quest to questdb.lua)
-	RPH_AddQuest(942, 4, 5, "Identify Plant Parts", 250, {["Unidentified Plant Parts"] = 10})
 	RPH_AddQuest(942, 4, 8, "Preparing for War", 250, {["Coilfang Armaments"] = 1}, nil, false)
 	RPH_AddQuest(942, 4, 8, "Coilfang Armaments", 75, {["Coilfang Armaments"] = 1}, nil, true)
 
@@ -499,8 +498,46 @@ function RPH_InitEnFactionGains()
 	RPH_AddInstance(989, 4, 8, "Black Morass", 1200, false)
 	RPH_AddInstance(989, 4, 8, "Old Hillsbrad Foothills (heroic)", 2800, true)
 	RPH_AddInstance(989, 4, 8, "Black Morass (heroic)", 1900, true)
+
+	-- The Scryers
+	-- TODO: add non-turn-in quests
+	-- TODO: add limits (ie some items are only until honored)
+	-- Source: https://tbc.wowhead.com/faction=934/the-scryers#quests
+	RPH_AddQuest(934, 4, 8, 10552, 3500, {}, zone.Shattrah_City, false)
+	RPH_AddQuest(934, 4, 5, 10412, 250, {["Firewing Signet"] = 10}, zone.Shattrah_City, false)
+	RPH_AddQuest(934, 4, 5, 10414, 25, {["Firewing Signet"] = 1}, zone.Shattrah_City)
+	RPH_AddQuest(934, 4, 5, 10415, 250, {["Firewing Signet"] = 10}, zone.Shattrah_City)
+
+	RPH_AddQuest(934, 4, 8, 10822, 25, {["Sunfury Signet"] = 1}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(934, 4, 8, 10824, 250, {["Sunfury Signet"] = 10}, zone.Shadowmoon_Valley, false)
+	RPH_AddQuest(934, 4, 8, 10659, 25, {["Sunfury Signet"] = 1}, zone.Shattrah_City)
+	RPH_AddQuest(934, 4, 8, 10656, 250, {["Sunfury Signet"] = 10}, zone.Shattrah_City, false)
+	RPH_AddQuest(934, 4, 8, 10823, 250, {["Sunfury Signet"] = 10}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(934, 4, 8, 10658, 250, {["Sunfury Signet"] = 10}, zone.Shattrah_City)
+
+	RPH_AddQuest(934, 4, 8, 10416, 25, {["Arcane Tome"] = 1}, zone.Shattrah_City)
+	RPH_AddQuest(934, 1, 3, 10025, 250, {["Basilisk Eye"] = 8}) 
 	
----	local preGC = collectgarbage("count"
+	-- The Aldor
+	-- TODO: add non-turn-in quests
+	-- TODO: add limits (ie some items are only until honored)
+	-- Source: https://tbc.wowhead.com/faction=932/the-aldor
+
+	RPH_AddQuest(932, 4, 8, 10551, 3500, {}, zone.Shattrah_City, false)
+	-- ITEM 30809 Mark of Sargeras
+	RPH_AddQuest(932, 4, 5, 10655, 25,  {["Mark of Sargeras"] =  1}, zone.Netherstorm)
+	RPH_AddQuest(932, 4, 5, 10653, 250, {["Mark of Sargeras"] = 10}, zone.Netherstorm, false)
+	RPH_AddQuest(932, 4, 5, 10826, 250, {["Mark of Sargeras"] = 10}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(932, 4, 5, 10827, 250, {["Mark of Sargeras"] = 10}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(932, 4, 5, 10828, 25,  {["Mark of Sargeras"] =  1}, zone.Shattrah_City)
+	-- ITEM 29425 Mark of Kil'jaeden
+	RPH_AddQuest(932, 4, 8, 10325, 250, {["Mark of Kil'jaeden"] = 10}, zone.Shattrah_City, false)
+	RPH_AddQuest(932, 4, 8, 10326, 250, {["Mark of Kil'jaeden"] = 10}, zone.Shattrah_City)
+	RPH_AddQuest(932, 4, 8, 10327, 25, {["Mark of Kil'jaeden"] = 1}, zone.Shattrah_City)
+
+	RPH_AddQuest(932, 1, 3, 10019, 250, {["Dreadfang Venom Sac"] = 8}, zone.Shattrah_City) 
+
+---	local preGC = collectgarbage("count")
 	collectgarbage("collect")
 ---	print("Collected " .. (preGC-collectgarbage("count")) .. " kB of garbage RPH");
 end
