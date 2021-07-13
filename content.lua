@@ -503,29 +503,41 @@ function RPH_InitEnFactionGains()
 	-- TODO: add non-turn-in quests
 	-- TODO: add limits (ie some items are only until honored)
 	-- Source: https://tbc.wowhead.com/faction=934/the-scryers#quests
-	RPH_AddQuest(934, 4, 5, "Single Sunfury Signet", 25, {["Sunfury Signet"] = 1})
-	RPH_AddQuest(934, 4, 5, "Sunfury Signets", 250, {["Sunfury Signet"] = 10})
-	RPH_AddQuest(934, 4, 5, "More Sunfury Signets", 250, {["Sunfury Signet"] = 10})
-	RPH_AddQuest(934, 4, 5, "Single Firewing Signet", 25, {["Firewing Signet"] = 1})
-	RPH_AddQuest(934, 4, 5, "Firewing Signets", 250, {["Firewing Signet"] = 10})
-	RPH_AddQuest(934, 4, 5, "More Firewing Signets", 250, {["Firewing Signet"] = 10})
-	-- This one is only if you are switching faction from Aldor...
-	RPH_AddQuest(934, 4, 5, "More Basilisk Eyes", 250, {["Basilisk Eye"] = 8}) 
+	RPH_AddQuest(934, 4, 8, 10552, 3500, {}, zone.Shattrah_City, false)
+	RPH_AddQuest(934, 4, 5, 10412, 250, {["Firewing Signet"] = 10}, zone.Shattrah_City, false)
+	RPH_AddQuest(934, 4, 5, 10414, 25, {["Firewing Signet"] = 1}, zone.Shattrah_City)
+	RPH_AddQuest(934, 4, 5, 10415, 250, {["Firewing Signet"] = 10}, zone.Shattrah_City)
+
+	RPH_AddQuest(934, 4, 8, 10822, 25, {["Sunfury Signet"] = 1}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(934, 4, 8, 10824, 250, {["Sunfury Signet"] = 10}, zone.Shadowmoon_Valley, false)
+	RPH_AddQuest(934, 4, 8, 10659, 25, {["Sunfury Signet"] = 1}, zone.Shattrah_City)
+	RPH_AddQuest(934, 4, 8, 10656, 250, {["Sunfury Signet"] = 10}, zone.Shattrah_City, false)
+	RPH_AddQuest(934, 4, 8, 10823, 250, {["Sunfury Signet"] = 10}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(934, 4, 8, 10658, 250, {["Sunfury Signet"] = 10}, zone.Shattrah_City)
+
+	RPH_AddQuest(934, 4, 8, 10416, 25, {["Arcane Tome"] = 1}, zone.Shattrah_City)
+	RPH_AddQuest(934, 1, 3, 10025, 250, {["Basilisk Eye"] = 8}) 
 	
 	-- The Aldor
 	-- TODO: add non-turn-in quests
 	-- TODO: add limits (ie some items are only until honored)
 	-- Source: https://tbc.wowhead.com/faction=932/the-aldor
-	RPH_AddQuest(932, 4, 5, "Single Mark of Sargeras", 25, {["Mark of Sargeras"] = 1})
-	RPH_AddQuest(932, 4, 5, "Marks of Sargeras", 250, {["Mark of Sargeras"] = 10})
-	RPH_AddQuest(932, 4, 5, "More Marks of Sargerass", 250, {["Mark of Sargeras"] = 10})
-	RPH_AddQuest(932, 4, 5, "Single Mark of Kil'jaeden", 25, {["Mark of Kil'jaeden"] = 1})
-	RPH_AddQuest(932, 4, 5, "Marks of Kil'jaeden", 250, {["Mark of Kil'jaeden"] = 10})
-	RPH_AddQuest(932, 4, 5, "More Marks of Kil'jaeden", 250, {["Mark of Kil'jaeden"] = 10})
-	-- This one is only if you are switching faction from Aldor...
-	RPH_AddQuest(932, 4, 5, "More Venom Sacs", 250, {["Dreadfang Venom Sac"] = 8}) 
 
----	local preGC = collectgarbage("count"
+	RPH_AddQuest(932, 4, 8, 10551, 3500, {}, zone.Shattrah_City, false)
+	-- ITEM 30809 Mark of Sargeras
+	RPH_AddQuest(932, 4, 5, 10655, 25,  {["Mark of Sargeras"] =  1}, zone.Netherstorm)
+	RPH_AddQuest(932, 4, 5, 10653, 250, {["Mark of Sargeras"] = 10}, zone.Netherstorm, false)
+	RPH_AddQuest(932, 4, 5, 10826, 250, {["Mark of Sargeras"] = 10}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(932, 4, 5, 10827, 250, {["Mark of Sargeras"] = 10}, zone.Shadowmoon_Valley)
+	RPH_AddQuest(932, 4, 5, 10828, 25,  {["Mark of Sargeras"] =  1}, zone.Shattrah_City)
+	-- ITEM 29425 Mark of Kil'jaeden
+	RPH_AddQuest(932, 4, 8, 10325, 250, {["Mark of Kil'jaeden"] = 10}, zone.Shattrah_City, false)
+	RPH_AddQuest(932, 4, 8, 10326, 250, {["Mark of Kil'jaeden"] = 10}, zone.Shattrah_City)
+	RPH_AddQuest(932, 4, 8, 10327, 25, {["Mark of Kil'jaeden"] = 1}, zone.Shattrah_City)
+
+	RPH_AddQuest(932, 1, 3, 10019, 250, {["Dreadfang Venom Sac"] = 8}, zone.Shattrah_City) 
+
+---	local preGC = collectgarbage("count")
 	collectgarbage("collect")
 ---	print("Collected " .. (preGC-collectgarbage("count")) .. " kB of garbage RPH");
 end
